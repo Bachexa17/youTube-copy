@@ -1,0 +1,139 @@
+:root {
+  --header-bg-border-color: rgb(40, 40, 40);
+}
+
+header {
+  grid-area: header;
+
+  position: fixed;
+  left: 0;
+  right: 1.5rem;
+
+  height: 3.5rem;
+
+  z-index: 100;
+
+  background-color: black;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+}
+
+/* #region left side */
+.header-left {
+  margin-left: 1rem;
+  gap: 1rem;
+}
+
+.header-left-menu-img {
+  width: 1.3rem;
+}
+
+.header-left-logo-img {
+  height: 1.3rem;
+  cursor: pointer;
+}
+
+/* #endregion */
+
+/* #region middle side */
+.header-middle {
+  padding: 0 4rem 0 6rem;
+  height: 2.5rem;
+  width: 53%;
+}
+
+.header-middle-input {
+  height: inherit;
+  width: 100%;
+
+  outline: none;
+  border-radius: 2rem 0 0 2rem;
+  border: 1px solid var(--header-bg-border-color);
+
+  background-color: rgb(15, 15, 15);
+  color: rgb(200, 200, 200);
+
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
+.header-middle-search-img {
+  border: 1px solid var(--header-bg-border-color);
+  border-radius: 0 2rem 2rem 0;
+
+  padding: 0.5rem 1.1rem;
+
+  background-color: var(--header-bg-border-color);
+  cursor: pointer;
+}
+
+.header-middle-voice-img {
+  background-color: var(--header-bg-border-color);
+  margin-left: 1rem;
+}
+
+/* #endregion */
+
+/* #region right side */
+.header-right {
+  column-gap: 0.6rem;
+}
+
+.header-right-create-img {}
+
+.header-right-bell-img {}
+
+.header-right-profile-img {
+  height: 2rem;
+  padding: 0.5rem;
+
+  border-radius: 100%;
+
+  cursor: pointer;
+}
+
+/* #endregion */
+
+/* #region header animation */
+.header-icons,
+.header-middle-voice-img {
+  padding: 0.6rem;
+  border-radius: 100%;
+  cursor: pointer;
+
+  transition: all 0.10s;
+}
+
+.header-icons:hover {
+  background-color: var(--header-bg-border-color);
+}
+
+.header-middle-voice-img:hover {
+  background-color: rgb(60, 60, 60);
+}
+
+/* #endregion */
+
+/* #region sidebar */
+aside {
+  grid-area: aside;
+
+  position: fixed;
+  top: 3.5rem;
+  bottom: 0;
+
+  width: 4.5rem;
+
+  z-index: 99;
+
+  background-color: var(--main-bg-color);
+}
+
+/* #endregion */
