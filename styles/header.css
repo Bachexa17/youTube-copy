@@ -27,12 +27,8 @@ header div {
 
 /* #region left side */
 .header-left {
-  margin-left: 1rem;
-  gap: 1rem;
-}
-
-.header-left-menu-img {
-  width: 1.3rem;
+  margin-left: 0.9rem;
+  gap: 0.9rem;
 }
 
 .header-left-logo-img {
@@ -82,13 +78,13 @@ header div {
 /* #endregion */
 
 /* #region right side */
-.header-right {
-  column-gap: 0.6rem;
-}
+.header-right {}
 
 .header-right-create-img {}
 
-.header-right-bell-img {}
+.header-right-bell-img {
+  margin: 0 0.7rem 0 0.3rem;
+}
 
 .header-right-profile-img {
   height: 2rem;
@@ -130,10 +126,46 @@ aside {
   bottom: 0;
 
   width: 4.5rem;
+  padding-top: 0.3rem;
 
   z-index: 99;
 
-  background-color: var(--main-bg-color);
+  background-color: black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.sidebar-box {
+  height: 3.5rem;
+  width: 4rem;
+
+  padding: 0.6rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  border-radius: 0.5rem;
+  cursor: pointer;
+
+  transition: all 0.10s;
+}
+
+.sidebar-box:hover {
+  background-color: var(--header-bg-border-color);
+}
+
+.sidebar-icon {
+  height: 1.5rem;
+}
+
+.sidebar-text {
+  font-size: 0.6rem;
+}
+
+
 
 /* #endregion */
