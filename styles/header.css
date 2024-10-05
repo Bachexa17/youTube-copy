@@ -1,6 +1,4 @@
-:root {
-  --header-bg-border-color: rgb(40, 40, 40);
-}
+@import "./general.css";
 
 header {
   grid-area: header;
@@ -51,7 +49,7 @@ header div {
 
   outline: none;
   border-radius: 2rem 0 0 2rem;
-  border: 1px solid var(--header-bg-border-color);
+  border: 1px solid var(--bg-border-color);
 
   background-color: rgb(15, 15, 15);
   color: rgb(200, 200, 200);
@@ -61,34 +59,30 @@ header div {
 }
 
 .header-middle-search-img {
-  border: 1px solid var(--header-bg-border-color);
+  border: 1px solid var(--bg-border-color);
   border-radius: 0 2rem 2rem 0;
 
   padding: 0.5rem 1.1rem;
 
-  background-color: var(--header-bg-border-color);
+  background-color: var(--bg-border-color);
   cursor: pointer;
 }
 
 .header-middle-voice-img {
-  background-color: var(--header-bg-border-color);
+  background-color: var(--bg-border-color);
   margin-left: 1rem;
 }
 
 /* #endregion */
 
 /* #region right side */
-.header-right {}
-
-.header-right-create-img {}
-
 .header-right-bell-img {
-  margin: 0 0.7rem 0 0.3rem;
+  margin: 0 0.9rem 0 0.3rem;
 }
 
 .header-right-profile-img {
   height: 2rem;
-  padding: 0.5rem;
+  padding: 0.4rem;
 
   border-radius: 100%;
 
@@ -97,27 +91,27 @@ header div {
 
 /* #endregion */
 
-/* #region header animation */
-.header-icons,
-.header-middle-voice-img {
+/* #region animation */
+.header-icons {
   padding: 0.6rem;
   border-radius: 100%;
   cursor: pointer;
 
-  transition: all 0.10s;
+  transition: all 0.20s;
 }
 
 .header-icons:hover {
-  background-color: var(--header-bg-border-color);
+  background-color: var(--bg-border-color);
 }
 
 .header-middle-voice-img:hover {
-  background-color: rgb(60, 60, 60);
+  background-color: var(--bg-border-sec-color);
 }
 
 /* #endregion */
 
 /* #region sidebar */
+
 aside {
   grid-area: aside;
 
@@ -141,31 +135,27 @@ aside {
   height: 3.5rem;
   width: 4rem;
 
+  font-size: 0.6rem;
+
   padding: 0.6rem 0;
+  border-radius: 0.5rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 
-  border-radius: 0.5rem;
   cursor: pointer;
 
-  transition: all 0.10s;
+  transition: all 0.20s;
 }
 
 .sidebar-box:hover {
-  background-color: var(--header-bg-border-color);
+  background-color: var(--bg-border-color);
 }
 
 .sidebar-icon {
   height: 1.5rem;
 }
-
-.sidebar-text {
-  font-size: 0.6rem;
-}
-
-
 
 /* #endregion */

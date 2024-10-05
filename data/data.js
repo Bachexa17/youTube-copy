@@ -1,4 +1,4 @@
-const data = [
+export const videoData = [
   {
     videoId: "448f1837-0dfe-43df-8aee-bc2cce516f66",
     videoImage: "https://i.ytimg.com/vi/kUMe1FH4CHE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAqNc5MbJb8x46bmw-87vRzzn2yBg",
@@ -1101,4 +1101,6 @@ const data = [
   }
 ]
 
-
+export const contentOptData = [
+  "All", "Music", "Indie pop music", "Gaming", "Contemporary R&B", "Synthpop", "Albums", "Mixes", "Factorio", "Playlists", "Martial arts", "Computer science", "Computer hardware", "Hip hop", "Recently watched", "New to you"
+]

@@ -1,15 +1,89 @@
+@import "./general.css";
+
 main {
   grid-area: main;
 
   background-color: black;
 }
 
-.content-options {
-  border: 1px solid gray;
+/* #region content options */
 
+.content-options {
   height: 3.5rem;
-  margin: 0 1.5rem;
+  padding: 0 1.5rem;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  position: relative;
 }
+
+.left-arrow,
+.right-arrow {
+  position: absolute;
+  display: flex;
+  z-index: 1;
+}
+
+.left-arrow {
+  background: linear-gradient(to right, black 50%, transparent);
+  left: 0;
+  padding-right: 4rem;
+  padding-left: 0.5rem
+}
+
+.right-arrow {
+  background: linear-gradient(to left, black 50%, transparent);
+  right: 0;
+  padding-left: 4rem;
+  padding-right: 0.5rem
+}
+
+.left-arrow-img,
+.right-arrow-img {
+  border-radius: 100%;
+  cursor: pointer;
+
+  padding: 0.5rem;
+}
+
+.options-box {
+  height: inherit;
+
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+#option-main {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  padding: 0.2rem 0.8rem;
+  border-radius: 1rem;
+
+  margin-right: 0.3rem;
+}
+
+.option {
+  font-size: 0.880rem;
+  font-weight: 500;
+
+  background-color: var(--bg-border-color);
+  padding: 0.5rem 0.8rem;
+
+  border-radius: 0.6rem;
+  cursor: pointer;
+
+  text-wrap: nowrap;
+}
+
+/* #endregion */
+
+/* #region content */
 
 .content-container {
   display: grid;
@@ -23,3 +97,32 @@ main {
   border: 1px solid darkred;
   height: 19rem;
 }
+
+/* #endregion */
+
+/* #region animation */
+
+.options-box {
+  transition: transform 0.20s;
+}
+
+.option {
+  transition: all 0.20s;
+}
+
+.option:hover {
+  background-color: var(--bg-border-sec-color);
+}
+
+.left-arrow-img,
+.right-arrow-img {
+  transition: background-color 0.20s;
+}
+
+.left-arrow-img:hover,
+.right-arrow-img:hover {
+  background-color: var(--bg-border-sec-color);
+}
+
+
+/* #endregion */
