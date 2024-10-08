@@ -15,9 +15,8 @@ main {
   display: flex;
   align-items: center;
 
-  overflow: hidden;
-
   position: relative;
+  overflow: hidden;
 }
 
 .left-arrow,
@@ -55,6 +54,10 @@ main {
   display: flex;
   align-items: center;
   gap: 0.7rem;
+
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 #option-main {
@@ -69,7 +72,8 @@ main {
 }
 
 .option {
-  font-size: 0.880rem;
+  display: inline-flex;
+  font-size: 0.87rem;
   font-weight: 500;
 
   background-color: var(--bg-border-color);
@@ -101,10 +105,6 @@ main {
 /* #endregion */
 
 /* #region animation */
-
-.options-box {
-  transition: transform 0.20s;
-}
 
 .option {
   transition: all 0.20s;
