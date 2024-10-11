@@ -1,13 +1,13 @@
-import { contentOptData } from "../data/data.js";
+import { videoData, contentOptData } from "../data/data.js";
 
 contentOptRender();
 contentOptScroll();
+contentRender();
 
 function contentOptRender() {
   contentOptData.forEach(data => {
     document.querySelector('.options-box').innerHTML += `<div class="option">${data}</div>`;
   });
-
 };
 
 function contentOptScroll() {
@@ -31,8 +31,6 @@ function contentOptScroll() {
   function checkArrow() {
     const rightArrowElement = document.querySelector('.right-arrow');
     const leftArrowElement = document.querySelector('.left-arrow');
-    console.log(scrollElement.scrollLeft)
-    console.log(scrollState)
 
     rightArrowElement.style.visibility = 'visible';
     leftArrowElement.style.visibility = 'hidden';
@@ -45,5 +43,35 @@ function contentOptScroll() {
     };
   };
 
+};
+
+function contentRender() {
+  let html = '';
+  videoData.forEach(data => {
+    if (data.channelImage) {
+      html += `
+      <div class="video" id="${data.videoId}">
+        <div class="video-image-box">
+          <img class="video-image" src="${data.videoImage}">
+          <div class="video-length-overlay">${data.videoLength}</div>
+        </div>
+        <div class="video-info">
+          <img class="channel-image" src="${data.channelImage}">
+          <div class="video-info-column">
+            <div class="video-title">${data.videoTitle}</div>
+            <div class="channel-name">${data.channelName}</div>
+            <div class="video-info-column-row">
+              <div class="video-views">${data.videoViews}</div>
+              &#8226
+              <div class="video-age">${data.videoAge}</div>
+            </div>
+          </div>
+          <img class="video-menu" src="images/main/video-menu.svg">
+        </div>
+      </div>
+      `;
+    }
+  });
+  document.querySelector('.content-container').innerHTML = html;
 };
 
