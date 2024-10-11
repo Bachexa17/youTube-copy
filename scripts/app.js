@@ -48,8 +48,8 @@ function contentOptScroll() {
 function contentRender() {
   let html = '';
   videoData.forEach(data => {
-    if (data.channelImage) {
-      html += `
+    html += `
+    <a href="https://www.youtube.com/${data.videoLink}">
       <div class="video" id="${data.videoId}">
         <div class="video-image-box">
           <img class="video-image" src="${data.videoImage}">
@@ -69,8 +69,8 @@ function contentRender() {
           <img class="video-menu" src="images/main/video-menu.svg">
         </div>
       </div>
-      `;
-    }
+    </a>
+    `;
   });
   document.querySelector('.content-container').innerHTML = html;
 };
